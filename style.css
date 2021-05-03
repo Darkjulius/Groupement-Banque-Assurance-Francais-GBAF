@@ -1,0 +1,258 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer{
+    background: url('images/hurricane.png');
+}
+
+/*Flexbox de l'en-tête regroupant le logo ainsi que le nom et prénom du connecté.*/
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #8a7c7c;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#logo_gbaf{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.logo_gbaf img{
+    width: 80px;
+    height: 90px;
+}
+
+#header .identifiant {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+/*----------Fin.----------*/
+
+/*------------Page Connexion/Inscription/Profil/NewComment---------------*/
+.style{
+    background: transparent;
+    border: 2px solid #8a7c7c;
+    border-radius: 10px;
+    color: #8a7c7c;
+    padding: 5px 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+#connexion {
+    text-align: center;
+}
+
+/*-------------------------Page Accueil----------------------------------*/
+#page{
+    width: auto;
+}
+
+h1, h2, .identifiant{
+    text-transform: uppercase;
+    color: rgb(138,124,124);
+    font-weight: bold;
+}
+
+.illustration_gbaf img{
+    width: 100%;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: #8a7c7c;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mentions{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-transform: uppercase;
+}
+
+.contact{
+    border-right: 2px solid black;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-transform: uppercase;
+}
+
+/*-----flexbox acteurs & partenaires de la page Accueil-----*/
+.acteurs_partenaires{
+    border: 2px solid #8a7c7c;
+    background: url('images/cavern_pink.png');
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 15px;
+}
+
+.acteurs_partenaires .partenaires{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.acteurs_partenaires .partenaires .logo{
+    width: 20%;
+}
+
+.acteurs_partenaires .partenaires .texte{
+    width: 70%;
+    margin-left: 5px;
+}
+
+
+.acteurs_partenaires .partenaires .suite{
+    width: 10%;
+}
+
+.logo img{
+    width: 100%;
+}
+.profil{
+    text-align: end;
+}
+
+/*-------------------------Page Acteur----------------------------------*/
+.logo_acteurs img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#commentaires{
+    border: 2px solid #8a7c7c;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#commentaires .commentaires .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#commentaires .commentaires .container .nouveau{
+    margin-left: 70%;
+
+}
+
+input{
+    width: 99.4%;
+}
+
+.nombres{
+    font-weight: bold;
+}
+
+/*------------Responsive---------------*/
+@media screen and (min-width: 320px) and (max-width: 576px)/*écrans inférieurs à 480px (téléphones)*/{
+    #header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 2px solid #8a7c7c;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .texte_gbaf, h1, p, ul{
+        text-align: center;
+        padding: 0px;
+    }
+
+    .text_acteurs, h2{
+        text-align: center;
+    }
+
+    .acteurs_partenaires .partenaires{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .acteurs_partenaires .partenaires .logo {
+        align-self: center;
+        width: 98.5%;
+
+    }
+
+    .acteurs_partenaires .partenaires .texte{
+        align-self: flex-start;
+        width: auto;
+        margin-left: auto;
+    }
+
+    .acteurs_partenaires .partenaires .suite{
+        align-self: flex-end;
+        width: auto;
+        margin-left: auto;
+    }
+
+    .logo_acteurs img{
+        margin: auto;
+        width: 100%;
+
+    }
+
+    .profil{
+        text-align: center;
+    }
+/*------------Page Acteurs---------------*/
+    #commentaires .commentaires .container .nouveau{
+        margin-left: 20%;
+    }
+
+    input{
+    width: 98%;
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px)/*écrans compris entre 768px et 1024px*/{
+    .texte_gbaf, h1, p, ul{
+        text-align: center;
+        padding: 0px;
+    }
+
+    .text_acteurs, h2{
+        text-align: center;
+    }
+
+    .acteurs_partenaires .partenaires{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .acteurs_partenaires .partenaires .suite{
+        align-self: flex-end;
+        width: auto;
+        margin-left: auto;
+    }
+
+/*------------Page Acteurs---------------*/
+    #commentaires .commentaires .container .nouveau{
+        margin-left: 50%;
+    }
+
+    .logo_acteurs img{
+        width: 80%;
+    }
+
+    input{
+        width: 98.9%;
+    }
+}
